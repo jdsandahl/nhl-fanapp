@@ -1,0 +1,98 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #2b2e34;
+  margin: 0;
+}
+
+#wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 40% 1fr 25%;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "nav nav side"
+    "main main side"
+    "footer footer side";
+}
+
+#headerContent {
+  grid-area: header;
+  background-color: #000000;
+}
+
+#headerContent p {
+  color: blue;
+}
+
+#primaryNav {
+  grid-area: nav;
+  background-color: #e4e5e6;
+}
+
+#mainContent {
+  grid-area: main;
+  background-color: #e4e5e6;
+}
+
+#mainContent .container {
+    align-content: center;
+  display: grid;
+  grid-template-columns: 20px 1fr 1fr 1fr 20px;
+  grid-template-rows: 180px;
+  grid-template-areas: "tLeft cardA cardB cardC tRight";
+}
+
+.toggle {
+  background: #2e2d2c3f;
+}
+
+.left {
+  grid-area: tLeft;
+}
+
+.right {
+  grid-area: tRight;
+}
+
+.logoCard {
+}
+
+.a {
+  grid-area: cardA;
+  background-color: royalblue;
+}
+
+.b {
+  grid-area: cardB;
+  background-color: seagreen;
+}
+
+.c {
+  grid-area: cardC;
+  background-color: tan;
+}
+
+#sideContent {
+  grid-area: side;
+  background-color: #e4e5e6;
+}
+
+#footerContent {
+  grid-area: footer;
+  background-color: #e4e5e6;
+}
